@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-gradient">RGV</span> Stonewall
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="endorsements.html">Endorsements</a>
+                <a href="events.html">Events</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="voting.html">Voting</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container reveal">
+            <h1>Get <span class="text-gradient">Involved</span></h1>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Volunteers are the backbone of our organization. Whether you have 2 hours a month or 10 hours a week, we need your help.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="padding-top: 2rem;">
+        <div class="grid" style="grid-template-columns: 1fr 1.5fr; gap: 4rem;">
+            
+            <div class="volunteer-info">
+                <h3>Ways to Help</h3>
+                <div class="card mb-4">
+                    <h4>Knocking Doors</h4>
+                    <p style="font-size: 0.9rem;">Talking directly to voters is the most effective way to swing elections.</p>
+                </div>
+                <div class="card mb-4" style="border-color: rgba(236, 72, 153, 0.3);">
+                    <h4>Phone Banking</h4>
+                    <p style="font-size: 0.9rem;">Call voters from the comfort of our volunteer hub or your own home.</p>
+                </div>
+                <div class="card mb-4" style="border-color: rgba(59, 130, 246, 0.3);">
+                    <h4>Event Support</h4>
+                    <p style="font-size: 0.9rem;">Help us organize rallies, set up at Pride festivals, or run our monthly meetings.</p>
+                </div>
+            </div>
+
+            <div class="card" style="align-self: start;">
+                <h3 class="mb-4">Volunteer Sign-up</h3>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for signing up!');">
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0;">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Areas of Interest (Select all that apply)</label>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                            <label style="font-weight: 400;"><input type="checkbox" name="interest"> Block Walking / Canvassing</label>
+                            <label style="font-weight: 400;"><input type="checkbox" name="interest"> Phone Banking / Texting</label>
+                            <label style="font-weight: 400;"><input type="checkbox" name="interest"> Event Planning / Tabling</label>
+                            <label style="font-weight: 400;"><input type="checkbox" name="interest"> Communications & Social Media</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px;">Sign Up to Volunteer</button>
+                    <p style="text-align: center; font-size: 0.8rem; margin-top: 1rem;">By submitting this form, you agree to receive emails and SMS from RGV Stonewall Democrats.</p>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-gradient">RGV</span> Stonewall
+                </a>
+                <p>Empowering the LGBTQ+ voice in the democratic process across the Rio Grande Valley, Texas.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="issues.html">Our Platform</a></li>
+                    <li><a href="endorsements.html">Endorsements</a></li>
+                    <li><a href="events.html">Events & Meetings</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Action</h4>
+                <ul class="footer-links">
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="voting.html">Voter Resources</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Rio Grande Valley Stonewall Democrats. All rights reserved. Pol. Adv. paid for by RGV Stonewall Democrats PAC.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

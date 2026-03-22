@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .donate-btn-option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--card-border-glass);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .donate-btn-option:hover, .donate-btn-option.selected {
+            border-color: var(--primary);
+            background: rgba(139, 92, 246, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-gradient">RGV</span> Stonewall
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="endorsements.html">Endorsements</a>
+                <a href="events.html">Events</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="voting.html">Voting</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container reveal">
+            <h1>Fund the <span class="text-gradient">Movement</span></h1>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Grassroots organizing takes resources. By contributing to the PAC, you directly fund efforts to elect pro-equality champions in our local communities.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="padding-top: 2rem;">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+            
+            <div>
+                <h3 class="mb-4">Why Give Locally?</h3>
+                <p>State and national campaigns get a lot of attention, but local elections impact our daily lives the most—from our school boards to our county courts.</p>
+                <div style="margin-top: 2rem;">
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;">
+                        <div style="color: var(--primary); font-size: 1.5rem;">&#10003;</div>
+                        <p><strong>Mobilize Voters:</strong> Funding goes to text banks, mailers, and door-hangers targeting LGBTQ+ and allied voters.</p>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start;">
+                        <div style="color: var(--secondary); font-size: 1.5rem;">&#10003;</div>
+                        <p><strong>Support Candidates:</strong> We directly support candidates who are unafraid to stand with us.</p>
+                    </div>
+                    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <div style="color: var(--accent-blue); font-size: 1.5rem;">&#10003;</div>
+                        <p><strong>Build Infrastructure:</strong> Sustained giving helps us maintain a year-round presence in the Valley.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="align-self: start; background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9)); border: 1px solid var(--primary);">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 0;">Make a Contribution</h3>
+                    <p style="font-size: 0.9rem;">Secure donation via ActBlue</p>
+                </div>
+                
+                <div class="donation-grid">
+                    <div class="donate-btn-option" onclick="selectAmount(this)">$25</div>
+                    <div class="donate-btn-option selected" onclick="selectAmount(this)">$50</div>
+                    <div class="donate-btn-option" onclick="selectAmount(this)">$100</div>
+                    <div class="donate-btn-option" onclick="selectAmount(this)">$250</div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Custom Amount ($)">
+                </div>
+                
+                <a href="#" class="btn btn-pride" style="width: 100%; border-radius: 8px; font-size: 1.2rem; padding: 1rem;">Donate via ActBlue &nearr;</a>
+                
+                <p style="text-align: center; font-size: 0.75rem; margin-top: 1.5rem; color: var(--text-muted);">
+                    Contributions or gifts to RGV Stonewall Democrats PAC are not tax deductible.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-gradient">RGV</span> Stonewall
+                </a>
+                <p>Empowering the LGBTQ+ voice in the democratic process across the Rio Grande Valley, Texas.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="issues.html">Our Platform</a></li>
+                    <li><a href="endorsements.html">Endorsements</a></li>
+                    <li><a href="events.html">Events & Meetings</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Action</h4>
+                <ul class="footer-links">
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="voting.html">Voter Resources</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Rio Grande Valley Stonewall Democrats. All rights reserved. Pol. Adv. paid for by RGV Stonewall Democrats PAC.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function selectAmount(element) {
+            document.querySelectorAll('.donate-btn-option').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+    </script>
+</body>
+</html>

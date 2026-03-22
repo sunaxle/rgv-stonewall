@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endorsements - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .endorsement-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .candidate-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #1e293b;
+            border: 2px solid var(--primary);
+            flex-shrink: 0;
+        }
+        @media (max-width: 600px) {
+            .endorsement-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Glow Effects -->
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-gradient">RGV</span> Stonewall
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="endorsements.html">Endorsements</a>
+                <a href="events.html">Events</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="voting.html">Voting</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container reveal">
+            <span class="badge">2026 Elections</span>
+            <h1>Our <span class="text-gradient">Endorsements</span></h1>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">A comprehensive voter guide for the Rio Grande Valley. We proudly endorse candidates who unequivocally commit to advancing LGBTQ+ equality.</p>
+        </div>
+    </header>
+
+    <!-- The Endorsement Process -->
+    <section class="container reveal" style="padding-top: 2rem;">
+        <div class="card" style="background: rgba(139, 92, 246, 0.05); border-color: rgba(139, 92, 246, 0.2);">
+            <h3>About Our Screening Process</h3>
+            <p>Every candidate listed below has completed a rigorous questionnaire and interview process with our PAC completely outlining their stance on critical LGBTQ+ issues. They have demonstrated a proven track record or a firm commitment to championing equality at every level of government.</p>
+        </div>
+    </section>
+
+    <!-- State & Federal Endorsements -->
+    <section class="container reveal">
+        <h2 class="text-gradient mb-8" style="background: var(--primary); -webkit-background-clip: text;">Statewide & Federal</h2>
+        <div class="grid">
+            <div class="card endorsement-card">
+                <div class="candidate-img"></div>
+                <div>
+                    <h4 style="margin-bottom: 0.2rem;">Jane Doe</h4>
+                    <p style="color: var(--primary); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">U.S. House District 15</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Jane has a 100% rating from the HRC and fights for the Equality Act.</p>
+                </div>
+            </div>
+            <div class="card endorsement-card">
+                <div class="candidate-img"></div>
+                <div>
+                    <h4 style="margin-bottom: 0.2rem;">John Smith</h4>
+                    <p style="color: var(--primary); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">Texas State Senate</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">John is a vocal opponent of discriminatory state legislation in Austin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Endorsements -->
+    <section class="container reveal">
+        <h2 class="text-gradient mb-8" style="background: var(--secondary); -webkit-background-clip: text;">Local & Municipal</h2>
+        <div class="grid">
+            <div class="card endorsement-card">
+                <div class="candidate-img"></div>
+                <div>
+                    <h4 style="margin-bottom: 0.2rem;">Sarah Jenkins</h4>
+                    <p style="color: var(--secondary); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">Hidalgo County Judge</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Commited to equitable funding for county health services.</p>
+                </div>
+            </div>
+            <div class="card endorsement-card">
+                <div class="candidate-img"></div>
+                <div>
+                    <h4 style="margin-bottom: 0.2rem;">Carlos Garcia</h4>
+                    <p style="color: var(--secondary); font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem;">McAllen City Commission</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Advocating for a comprehensive non-discrimination ordinance downtown.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <a href="voting.html" class="btn btn-secondary">Find Your Polling Location</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-gradient">RGV</span> Stonewall
+                </a>
+                <p>Empowering the LGBTQ+ voice in the democratic process across the Rio Grande Valley, Texas.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="issues.html">Our Platform</a></li>
+                    <li><a href="endorsements.html">Endorsements</a></li>
+                    <li><a href="events.html">Events & Meetings</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Action</h4>
+                <ul class="footer-links">
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="voting.html">Voter Resources</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Rio Grande Valley Stonewall Democrats. All rights reserved. Pol. Adv. paid for by RGV Stonewall Democrats PAC.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-gradient">RGV</span> Stonewall
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="endorsements.html">Endorsements</a>
+                <a href="events.html">Events</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="voting.html">Voting</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container reveal">
+            <h1>Contact <span class="text-gradient">Us</span></h1>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Have questions about our endorsements, events, or how to get involved? Send us a message.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="padding-top: 2rem;">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+            
+            <div>
+                <div class="card mb-8">
+                    <h3 class="mb-4">Get in Touch</h3>
+                    <p><strong>Email:</strong> info@rgvstonewall.org</p>
+                    <p><strong>Mailing Address:</strong><br>
+                    RGV Stonewall Democrats PAC<br>
+                    P.O. Box 12345<br>
+                    McAllen, TX 78501</p>
+                </div>
+
+                <div class="card" style="border-color: rgba(59, 130, 246, 0.3);">
+                    <h3 class="mb-4">Media Inquiries</h3>
+                    <p>For press requests or official comments, please contact our Communications Chair at media@rgvstonewall.org.</p>
+                </div>
+                
+                <div class="mt-8" style="display: flex; gap: 1rem;">
+                    <!-- Placeholder social icons -->
+                    <a href="#" class="btn btn-secondary" style="border-radius: 50%; padding: 1rem; width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">FB</a>
+                    <a href="#" class="btn btn-secondary" style="border-radius: 50%; padding: 1rem; width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">IG</a>
+                    <a href="#" class="btn btn-secondary" style="border-radius: 50%; padding: 1rem; width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">X</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" class="form-control">
+                            <option>General Inquiry</option>
+                            <option>Volunteering</option>
+                            <option>Endorsements/Candidates</option>
+                            <option>Media</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px;">Send Message</button>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-gradient">RGV</span> Stonewall
+                </a>
+                <p>Empowering the LGBTQ+ voice in the democratic process across the Rio Grande Valley, Texas.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="issues.html">Our Platform</a></li>
+                    <li><a href="endorsements.html">Endorsements</a></li>
+                    <li><a href="events.html">Events & Meetings</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Action</h4>
+                <ul class="footer-links">
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="voting.html">Voter Resources</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Rio Grande Valley Stonewall Democrats. All rights reserved. Pol. Adv. paid for by RGV Stonewall Democrats PAC.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

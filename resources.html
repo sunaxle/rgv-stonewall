@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGBTQ+ Resources - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <style>
+        .resource-card {
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid var(--primary);
+        }
+        .resource-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-gradient">RGV</span> Stonewall
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="endorsements.html">Endorsements</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="resources.html" style="color: var(--primary);">Resources</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="voting.html">Voting</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container reveal">
+            <h1>Community <span class="text-gradient">Resources</span></h1>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">We are committed to the wellbeing of the LGBTQ+ community in the Rio Grande Valley. Below is a directory of local shelters, medical clinics, and support groups available to you.</p>
+        </div>
+    </header>
+
+    <section class="container reveal">
+        <div class="card" style="padding: 1rem; margin-bottom: 2rem; border-color: rgba(139, 92, 246, 0.4);">
+            <div id="rgv-map" style="height: 450px; width: 100%; border-radius: 8px; z-index: 1;"></div>
+        </div>
+    </section>
+
+    <section class="container reveal" style="padding-top: 2rem;">
+        <h2 class="text-gradient mb-8" style="background: var(--primary); -webkit-background-clip: text; background-clip: text;">Shelters & Housing</h2>
+        <div class="grid mb-8">
+            <div class="card resource-card" style="border-top-color: var(--primary);">
+                <div class="resource-icon" style="color: var(--primary);">🏠</div>
+                <h3>Valley Safe Haven</h3>
+                <p><strong>Location:</strong> McAllen, TX</p>
+                <p>An LGBTQ-affirming emergency shelter providing temporary housing and case management for youth and young adults experiencing homelessness.</p>
+                <a href="#" class="btn btn-secondary mt-4" style="align-self: flex-start; margin-top: auto;">Contact Shelter</a>
+            </div>
+            <div class="card resource-card" style="border-top-color: var(--primary);">
+                <div class="resource-icon" style="color: var(--primary);">🏳️‍⚧️</div>
+                <h3>Transitional Living House</h3>
+                <p><strong>Location:</strong> Brownsville, TX</p>
+                <p>Long-term transitional housing specifically designed for transgender individuals, offering job placement support and life skills training.</p>
+                <a href="#" class="btn btn-secondary mt-4" style="align-self: flex-start; margin-top: auto;">Learn More</a>
+            </div>
+        </div>
+
+        <h2 class="text-gradient mb-8" style="background: var(--secondary); -webkit-background-clip: text; background-clip: text; margin-top: 4rem;">Clinics & Medical Care</h2>
+        <div class="grid mb-8">
+             <div class="card resource-card" style="border-top-color: var(--secondary);">
+                <div class="resource-icon" style="color: var(--secondary);">⚕️</div>
+                <h3>RGV Equality Clinic</h3>
+                <p><strong>Location:</strong> Harlingen, TX</p>
+                <p>A culturally competent health center offering primary and preventive care, HIV/STI testing, and gender-affirming hormone therapy on an informed-consent basis.</p>
+                <a href="#" class="btn btn-secondary mt-4" style="align-self: flex-start; margin-top: auto;">Book Appointment</a>
+            </div>
+            <div class="card resource-card" style="border-top-color: var(--secondary);">
+                <div class="resource-icon" style="color: var(--secondary);">🧠</div>
+                <h3>Pride Counseling Services</h3>
+                <p><strong>Location:</strong> Telehealth & Edinburg, TX</p>
+                <p>Mental health services provided by LGBTQ+ affirming, trauma-informed therapists. Sliding scale fees available for uninsured community members.</p>
+                <a href="#" class="btn btn-secondary mt-4" style="align-self: flex-start; margin-top: auto;">Visit Website</a>
+            </div>
+        </div>
+
+        <h2 class="text-gradient mb-8" style="background: var(--accent-blue); -webkit-background-clip: text; background-clip: text; margin-top: 4rem;">Support Groups & Social Spaces</h2>
+        <div class="grid mb-8">
+             <div class="card resource-card" style="border-top-color: var(--accent-blue);">
+                <div class="resource-icon" style="color: var(--accent-blue);">☕</div>
+                <h3>Queer Coffee Hour</h3>
+                <p><strong>Meets:</strong> Every Sunday morning</p>
+                <p>A casual weekly meetup at affirming local RGV coffee shops. A perfect space to meet new friends, network, and relax in a safe environment.</p>
+                <a href="#" class="btn btn-secondary mt-4" style="align-self: flex-start; margin-top: auto;">View Schedule</a>
+            </div>
+            <div class="card resource-card" style="border-top-color: var(--accent-blue);">
+                <div class="resource-icon" style="color: var(--accent-blue);">🫂</div>
+                <h3>Youth Alliance Network</h3>
+                <p><strong>Meets:</strong> Bi-weekly on Thursdays</p>
+                <p>A facilitated support group for true LGBTQ+ teenagers (ages 13-18) to discuss identity, school challenges, and build healthy peer support systems.</p>
+                <a href="#" class="btn btn-secondary mt-4" style="align-self: flex-start; margin-top: auto;">Join Group</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-gradient">RGV</span> Stonewall
+                </a>
+                <p>Empowering the LGBTQ+ voice in the democratic process across the Rio Grande Valley, Texas.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="issues.html">Our Platform</a></li>
+                    <li><a href="endorsements.html">Endorsements</a></li>
+                    <li><a href="events.html">Events & Meetings</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Action</h4>
+                <ul class="footer-links">
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="voting.html">Voter Resources</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Rio Grande Valley Stonewall Democrats. All rights reserved. Pol. Adv. paid for by RGV Stonewall Democrats PAC.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // RGV coordinates center (approx between McAllen and Brownsville)
+            var map = L.map('rgv-map').setView([26.15, -97.90], 10);
+
+            // Dark mode map tiles to match the site's premium aesthetic
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 20
+            }).addTo(map);
+
+            // Resource locations
+            var resources = [
+                { name: "Valley Safe Haven", lat: 26.2034, lng: -98.2300, type: "Shelter & Housing (McAllen)", color: "var(--primary)" },
+                { name: "Transitional Living House", lat: 25.9017, lng: -97.4975, type: "Housing (Brownsville)", color: "var(--primary)" },
+                { name: "RGV Equality Clinic", lat: 26.1906, lng: -97.6961, type: "Medical Clinic (Harlingen)", color: "var(--secondary)" },
+                { name: "Pride Counseling Services", lat: 26.3017, lng: -98.1633, type: "Mental Health (Edinburg)", color: "var(--secondary)" },
+                { name: "Queer Coffee Hour", lat: 26.18, lng: -98.20, type: "Social Space (McAllen/Pharr)", color: "var(--accent-blue)" },
+                { name: "Youth Alliance Network", lat: 26.31, lng: -98.15, type: "Support Group (Edinburg)", color: "var(--accent-blue)" }
+            ];
+
+            resources.forEach(function(rec) {
+                var marker = L.marker([rec.lat, rec.lng]).addTo(map);
+                marker.bindPopup(`<strong style="color: ${rec.color}; font-size: 1.1rem; font-family: 'Outfit', sans-serif;">${rec.name}</strong><br><span style="font-family: 'Inter', sans-serif;">${rec.type}</span>`);
+            });
+        });
+    </script>
+</body>
+</html>

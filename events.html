@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .event-card {
+            display: flex;
+            flex-direction: column;
+            border-left: 4px solid var(--primary);
+        }
+        .event-date {
+            color: var(--primary);
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-gradient">RGV</span> Stonewall
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="endorsements.html">Endorsements</a>
+                <a href="events.html">Events</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="voting.html">Voting</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container reveal">
+            <h1>Upcoming <span class="text-gradient">Events</span></h1>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Join us for meetings, block walks, and community events to build our grassroots power.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="padding-top: 2rem;">
+        <div class="grid">
+            <div class="card event-card">
+                <div class="event-date">Oct 15 &bull; 6:30 PM</div>
+                <h3>Monthly Membership Meeting</h3>
+                <p>Location: McAllen Public Library</p>
+                <p style="font-size: 0.95rem;">Join us for our monthly meeting. We'll be discussing our strategy for the upcoming early voting period and hearing from endorsed candidates.</p>
+                <a href="#" class="btn btn-secondary mt-8" style="align-self: flex-start; margin-top: auto;">RSVP</a>
+            </div>
+            
+            <div class="card event-card" style="border-left-color: var(--secondary);">
+                <div class="event-date" style="color: var(--secondary);">Oct 20 &bull; 9:00 AM</div>
+                <h3>Weekend Block Walk</h3>
+                <p>Location: Edinburg Municipal Park</p>
+                <p style="font-size: 0.95rem;">Help us knock on doors to mobilize Equality Voters. Training and scripts will be provided before we head out.</p>
+                <a href="volunteer.html" class="btn btn-secondary mt-8" style="align-self: flex-start; margin-top: auto;">Sign Up</a>
+            </div>
+
+            <div class="card event-card" style="border-left-color: var(--accent-blue);">
+                <div class="event-date" style="color: var(--accent-blue);">Nov 04 &bull; 8:00 PM</div>
+                <h3>Election Night Watch Party</h3>
+                <p>Location: Roosevelt's at 7, McAllen</p>
+                <p style="font-size: 0.95rem;">Gather with community members to watch the election results roll in. Food and drinks available for purchase.</p>
+                <a href="#" class="btn btn-secondary mt-8" style="align-self: flex-start; margin-top: auto;">More Info</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-gradient">RGV</span> Stonewall
+                </a>
+                <p>Empowering the LGBTQ+ voice in the democratic process across the Rio Grande Valley, Texas.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="issues.html">Our Platform</a></li>
+                    <li><a href="endorsements.html">Endorsements</a></li>
+                    <li><a href="events.html">Events & Meetings</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Action</h4>
+                <ul class="footer-links">
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="voting.html">Voter Resources</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Rio Grande Valley Stonewall Democrats. All rights reserved. Pol. Adv. paid for by RGV Stonewall Democrats PAC.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
