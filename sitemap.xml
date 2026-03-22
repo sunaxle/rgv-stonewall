@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- Core Pages -->
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/index.html</loc>
+      <lastmod>2026-03-22</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/about.html</loc>
+      <lastmod>2026-03-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/issues.html</loc>
+      <lastmod>2026-03-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/endorsements.html</loc>
+      <lastmod>2026-03-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   
+   <!-- Action Pages -->
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/donate.html</loc>
+      <lastmod>2026-03-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/volunteer.html</loc>
+      <lastmod>2026-03-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/voting.html</loc>
+      <lastmod>2026-03-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- New Test Pages (Temporarily Indexed) -->
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/president.html</loc>
+      <lastmod>2026-03-22</lastmod>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/action.html</loc>
+      <lastmod>2026-03-22</lastmod>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/community.html</loc>
+      <lastmod>2026-03-22</lastmod>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/youth.html</loc>
+      <lastmod>2026-03-22</lastmod>
+   </url>
+   <url>
+      <loc>https://sunaxle.github.io/rgv-stonewall/sitemap.html</loc>
+      <lastmod>2026-03-22</lastmod>
+      <priority>0.5</priority>
+   </url>
+</urlset>

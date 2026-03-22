@@ -408,6 +408,8 @@ footer {
     align-items: center;
     justify-content: flex-start;
     padding-top: 2rem;
+    padding-bottom: 6rem;
+    overflow-y: auto;
     transition: var(--transition);
     border-top: 1px solid var(--card-border-glass);
   }

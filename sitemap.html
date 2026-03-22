@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sitemap-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+        }
+        .sitemap-section {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .sitemap-section h2 {
+            color: var(--pride-pink);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.5rem;
+        }
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .sitemap-list a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+        }
+        .sitemap-list a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        .sitemap-list a::before {
+            content: '→';
+            margin-right: 10px;
+            color: var(--primary);
+            opacity: 0.5;
+        }
+        p.desc {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+            margin: 0.2rem 0 0 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding-top: 150px; text-align: center;">
+        <div class="container reveal">
+            <h1 class="text-gradient">Website Architecture Directory</h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">A comprehensive index of all active and exploratory pages on the RGV Stonewall domain.</p>
+        </div>
+    </header>
+
+    <section class="container reveal">
+        <div class="sitemap-container">
+            
+            <div class="sitemap-section">
+                <h2>Core Navigation</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="index.html">Homepage</a>
+                        <p class="desc">The main landing page for the organization.</p>
+                    </li>
+                    <li>
+                        <a href="about.html">About Us</a>
+                        <p class="desc">Mission, vision, and executive board info.</p>
+                    </li>
+                    <li>
+                        <a href="issues.html">Our Platform</a>
+                        <p class="desc">Core political stances and legislative priorities.</p>
+                    </li>
+                    <li>
+                        <a href="endorsements.html">Endorsements</a>
+                        <p class="desc">Voter guides and backed candidates.</p>
+                    </li>
+                    <li>
+                        <a href="events.html">Events & Meetings</a>
+                        <p class="desc">Public calendar for the RGV.</p>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Photo Gallery</a>
+                        <p class="desc">Images from past Pride, blockwalks, and events.</p>
+                    </li>
+                    <li>
+                        <a href="resources.html">LGBTQ+ Resources</a>
+                        <p class="desc">Links to health, legal, and crisis support in the Valley.</p>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                        <p class="desc">Inquiry forms and social links.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section">
+                <h2 style="color: var(--pride-blue);">Get Involved (Action)</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="donate.html">Donate</a>
+                        <p class="desc">Financial contribution portal.</p>
+                    </li>
+                    <li>
+                        <a href="volunteer.html">Volunteer</a>
+                        <p class="desc">Sign-up forms for block walking, phone banking, etc.</p>
+                    </li>
+                    <li>
+                        <a href="voting.html">Voter Hub</a>
+                        <p class="desc">Registration links, polling spots, ID requirements.</p>
+                    </li>
+                </ul>
+                
+                <h2 style="color: #10b981; margin-top: 2rem;">Utility Pages</h2>
+                <ul class="sitemap-list">
+                    <li>
+                        <a href="scroll.html">Original Timeline</a>
+                        <p class="desc">Legacy scrolling history integration.</p>
+                    </li>
+                    <li>
+                        <a href="sitemap.html">Sitemap</a>
+                        <p class="desc">You are here.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sitemap-section" style="border-top: 4px solid var(--pride-purple);">
+                <h2 style="color: var(--pride-purple);">2026 Executive Board Sandbox (Test Environment)</h2>
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 1rem;">11 unique mockups demonstrating potential expansions to the site's architecture.</p>
+                <ul class="sitemap-list">
+                    <li><a href="president.html">1. President's Corner</a></li>
+                    <li><a href="press.html">2. Press & Media Kit</a></li>
+                    <li><a href="events-calendar.html">3. Interactive Calendar Grid</a></li>
+                    <li><a href="impact.html">4. Transparency & Impact Report</a></li>
+                    <li><a href="action.html">5. Legislative Action Center</a></li>
+                    <li><a href="portal.html">6. Custom Member Portal Dashboard</a></li>
+                    <li><a href="volunteer-spotlight.html">7. Volunteer Spotlights & Profiles</a></li>
+                    <li><a href="community.html">8. Community DEI Partnerships</a></li>
+                    <li><a href="youth.html">9. Student / Youth Outreach</a></li>
+                    <li><a href="history-timeline.html">10. Visual Chapter History Archive</a></li>
+                    <li><a href="logo-designs.html">11. Interactive CSS Logo Sandbox</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col" style="text-align: center;">
+                <p>&copy; 2026 Rio Grande Valley Stonewall Democrats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
