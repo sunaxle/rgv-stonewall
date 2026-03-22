@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Calendar - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .calendar-day-header {
+            background: rgba(0,0,0,0.4);
+            text-align: center;
+            padding: 1rem 0;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .calendar-cell {
+            background: rgba(0,0,0,0.2);
+            min-height: 120px;
+            padding: 0.5rem;
+            position: relative;
+        }
+        .calendar-cell.empty { background: rgba(0,0,0,0.1); }
+        .calendar-date {
+            position: absolute;
+            top: 0.5rem; right: 0.5rem;
+            font-size: 0.8rem; opacity: 0.5;
+        }
+        .calendar-event {
+            background: rgba(139, 92, 246, 0.2);
+            border-left: 3px solid var(--pride-purple);
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .calendar-event:hover { background: rgba(139, 92, 246, 0.4); }
+        .calendar-event.primary { border-color: var(--pride-pink); background: rgba(236, 72, 153, 0.2); }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .gallery-item {
+            aspect-ratio: 1;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding-top: 120px; text-align: center;">
+        <div class="container reveal">
+            <h1 class="text-gradient">Events Calendar</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Join us for meetings, block walks, and community gatherings. Find where you fit in below.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="margin-top: 3rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2>March 2026</h2>
+            <div>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1rem;">&larr; Prev</button>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1rem;">Next &rarr;</button>
+            </div>
+        </div>
+        
+        <!-- Interactive Layout Grid Mockup -->
+        <div class="calendar-grid">
+            <div class="calendar-day-header">SUN</div>
+            <div class="calendar-day-header">MON</div>
+            <div class="calendar-day-header">TUE</div>
+            <div class="calendar-day-header">WED</div>
+            <div class="calendar-day-header">THU</div>
+            <div class="calendar-day-header">FRI</div>
+            <div class="calendar-day-header">SAT</div>
+
+            <div class="calendar-cell">
+                <span class="calendar-date">1</span>
+            </div>
+            <div class="calendar-cell">
+                <span class="calendar-date">2</span>
+            </div>
+            <div class="calendar-cell">
+                <span class="calendar-date">3</span>
+                <div class="calendar-event primary">Primary Election Day!</div>
+            </div>
+            <div class="calendar-cell">
+                <span class="calendar-date">4</span>
+            </div>
+            <div class="calendar-cell">
+                <span class="calendar-date">5</span>
+                <div class="calendar-event">Exec Board Meeting</div>
+            </div>
+            <div class="calendar-cell">
+                <span class="calendar-date">6</span>
+            </div>
+            <div class="calendar-cell">
+                <span class="calendar-date">7</span>
+                <div class="calendar-event">Sat. Block Walk (McAllen)</div>
+            </div>
+
+            <div class="calendar-cell"><span class="calendar-date">8</span></div>
+            <div class="calendar-cell"><span class="calendar-date">9</span></div>
+            <div class="calendar-cell"><span class="calendar-date">10</span></div>
+            <div class="calendar-cell"><span class="calendar-date">11</span></div>
+            <div class="calendar-cell"><span class="calendar-date">12</span></div>
+            <div class="calendar-cell"><span class="calendar-date">13</span></div>
+            <div class="calendar-cell">
+                <span class="calendar-date">14</span>
+                <div class="calendar-event">Social Mixer @ The Yard</div>
+            </div>
+
+            <div class="calendar-cell"><span class="calendar-date">15</span></div>
+            <div class="calendar-cell"><span class="calendar-date">16</span></div>
+            <div class="calendar-cell"><span class="calendar-date">17</span></div>
+            <div class="calendar-cell"><span class="calendar-date">18</span></div>
+            <div class="calendar-cell"><span class="calendar-date">19</span></div>
+            <div class="calendar-cell"><span class="calendar-date">20</span></div>
+            <div class="calendar-cell"><span class="calendar-date">21</span></div>
+
+            <div class="calendar-cell"><span class="calendar-date">22</span></div>
+            <div class="calendar-cell"><span class="calendar-date">23</span></div>
+            <div class="calendar-cell"><span class="calendar-date">24</span></div>
+            <div class="calendar-cell">
+                <span class="calendar-date">25</span>
+                <div class="calendar-event primary">General Membership Mtg</div>
+            </div>
+            <div class="calendar-cell"><span class="calendar-date">26</span></div>
+            <div class="calendar-cell"><span class="calendar-date">27</span></div>
+            <div class="calendar-cell">
+                <span class="calendar-date">28</span>
+                <div class="calendar-event">Trans Day of Visibility Rally</div>
+            </div>
+
+            <div class="calendar-cell"><span class="calendar-date">29</span></div>
+            <div class="calendar-cell"><span class="calendar-date">30</span></div>
+            <div class="calendar-cell"><span class="calendar-date">31</span></div>
+            <div class="calendar-cell empty"></div>
+            <div class="calendar-cell empty"></div>
+            <div class="calendar-cell empty"></div>
+            <div class="calendar-cell empty"></div>
+        </div>
+    </section>
+
+    <!-- Past Events Gallery -->
+    <section class="container reveal" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <h2>Event Archives & Gallery</h2>
+        <p>A look back at our community in action. We are stronger together.</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">[Photo: PRIDE 2025]</div>
+            <div class="gallery-item">[Photo: Block Walk]</div>
+            <div class="gallery-item">[Photo: Candidate Forum]</div>
+            <div class="gallery-item">[Photo: TDOV Rally]</div>
+            <div class="gallery-item">[Photo: Voter Reg Tabling]</div>
+            <div class="gallery-item">[Photo: Gala Dinner]</div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <button class="btn btn-secondary">Load More Photos</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-half-rainbow">RGV</span> Stonewall
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

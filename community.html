@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Initiatives - RGV Stonewall</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .partner-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .partner-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.3); }
+        .partner-logo-placeholder {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center; justify-content: center;
+            font-size: 0.8rem; color: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding-top: 120px; text-align: center;">
+        <div class="container reveal">
+            <h1 class="text-gradient">Community Initiatives</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Our fight for equality is intersectional. We actively partner with organizations advocating for reproductive justice, immigrant rights, and racial equity across the Valley.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="margin-top: 3rem;">
+        <div class="card grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+            <div>
+                <h2>Why Intersectionality Matters</h2>
+                <p>The RGV Stonewall Democrats recognizes that the LGBTQ+ community encompasses people of all races, ethnicities, genders, and socioeconomic backgrounds. We cannot achieve liberation for ourselves without securing the human rights of everyone in our border community.</p>
+                <p>Our Diversity, Equity, and Inclusion (DEI) committee ensures that our endorsements, event planning, and outreach strategies explicitly center marginalized voices within the queer community, particularly trans women of color and undocumented LGBTQ+ individuals.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px;">
+                <h3 style="margin-top: 0; color: var(--pride-purple);">Current Focus Areas</h3>
+                <ul style="line-height: 1.8; color: rgba(255,255,255,0.8);">
+                    <li><strong>Reproductive Freedom:</strong> Supporting abortion access funds and clinics in Tamaulipas/Texas borderlands.</li>
+                    <li><strong>Immigrant Rights:</strong> Advocating for LGBTQ+ asylum seekers currently waiting in Matamoros and Reynosa.</li>
+                    <li><strong>Voting Rights:</strong> Combating voter suppression tactics targeting college campuses and marginalized colonias.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container reveal" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <h2 style="text-align: center;">Our Coalition Partners</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto;">We are proud to work shoulder-to-shoulder with these incredible local organizations.</p>
+        
+        <div class="partner-grid">
+            <div class="partner-card">
+                <div class="partner-logo-placeholder">Logo</div>
+                <h3 style="margin: 0 0 0.5rem 0;">La Union del Pueblo Entero (LUPE)</h3>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Fighting for immigrant workers' rights and colonia improvements.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-logo-placeholder">Logo</div>
+                <h3 style="margin: 0 0 0.5rem 0;">South Texans for Reproductive Justice</h3>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Organizing for bodily autonomy and healthcare access.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-logo-placeholder">Logo</div>
+                <h3 style="margin: 0 0 0.5rem 0;">Valley AIDS Council (VAC)</h3>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Providing essential health services and HIV/STI testing.</p>
+            </div>
+            <div class="partner-card">
+                <div class="partner-logo-placeholder">Logo</div>
+                <h3 style="margin: 0 0 0.5rem 0;">ACLU of Texas - Border Rights</h3>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">Defending civil liberties and human rights in border communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-half-rainbow">RGV</span> Stonewall
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

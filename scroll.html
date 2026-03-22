@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Journey - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .scroll-container {
+            position: relative;
+        }
+        .scroll-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        /* Parallax Backgrounds */
+        .bg-1 { background: linear-gradient(rgba(15,17,21,0.7), rgba(15,17,21,0.9)), url('https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; }
+        .bg-2 { background: linear-gradient(rgba(139,92,246,0.8), rgba(15,17,21,0.9)), url('https://images.unsplash.com/photo-1563214539-78601c379aee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; }
+        .bg-3 { background: linear-gradient(rgba(236,72,153,0.8), rgba(15,17,21,0.9)), url('https://images.unsplash.com/photo-1596482181514-6b99deba203b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; }
+        .bg-4 { background: var(--bg-dark); }
+
+        .scroll-content {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 4rem;
+            border-radius: 20px;
+            border: 1px solid var(--card-border-glass);
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scroll-section.is-visible .scroll-content {
+            opacity: 1;
+            transform: translateY(0) scale(1.0);
+        }
+    </style>
+</head>
+<body>
+    <nav style="background: rgba(15, 17, 21, 0.9);">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">&#9776;</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="issues.html">Issues</a>
+                <a href="endorsements.html">Endorsements</a>
+                <a href="events.html">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="resources.html">Resources</a>
+                <a href="scroll.html" style="color: var(--primary);">Timeline</a>
+                <a href="volunteer.html">Volunteer</a>
+                <a href="voting.html">Voting</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="scroll-container">
+        <!-- Section 1 -->
+        <div class="scroll-section bg-1" id="sec1">
+            <div class="scroll-content">
+                <h1 class="text-pride" style="font-size: 4.5rem; margin-bottom: 0;">1969</h1>
+                <h2 style="font-size: 2rem;">The Spark of a Movement</h2>
+                <p style="font-size: 1.2rem; color: #fff;">The Stonewall Inn uprising ignited the modern fight for LGBTQ+ rights. A legacy born of resistance, resilience, and community defense.</p>
+            </div>
+        </div>
+        
+        <!-- Section 2 -->
+        <div class="scroll-section bg-2" id="sec2">
+            <div class="scroll-content">
+                <h1 class="text-gradient" style="font-size: 4.5rem; margin-bottom: 0;">1990s</h1>
+                <h2 style="font-size: 2rem;">Organizing the South</h2>
+                <p style="font-size: 1.2rem; color: #fff;">The movement spreads. Chapters formed across Texas lay the groundwork for mobilizing equality voters in regions traditionally disenfranchised.</p>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="scroll-section bg-3" id="sec3">
+            <div class="scroll-content">
+                <h1 style="font-size: 4.5rem; background: var(--secondary); -webkit-background-clip: text; color: transparent; margin-bottom: 0;">2010s</h1>
+                <h2 style="font-size: 2rem;">The RGV Chapter is Born</h2>
+                <p style="font-size: 1.2rem; color: #fff;">A unified voice emerges in the Valley. Local activists actively organize to elect pro-equality candidates and demand comprehensive nondiscrimination protections.</p>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="scroll-section bg-4" id="sec4">
+            <div class="scroll-content" style="background: transparent; border: none; backdrop-filter: none; box-shadow: none;">
+                <h1 style="font-size: 4.5rem; background: var(--accent-blue); -webkit-background-clip: text; color: transparent; margin-bottom: 0;">Today</h1>
+                <h2 style="font-size: 2rem;">The Fight Continues</h2>
+                <p style="font-size: 1.2rem;">Our history is still being written down in South Texas. Join us as we organize the next generation of equality voters.</p>
+                <a href="volunteer.html" class="btn btn-primary mt-8">Join the Movement</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Script for scroll-triggered animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll('.scroll-section');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '-10% 0px -10% 0px',
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    } else {
+                        // Optional: remove class to animate back out when scrolling away
+                        entry.target.classList.remove('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(sec => {
+                observer.observe(sec);
+            });
+        });
+    </script>
+</body>
+</html>

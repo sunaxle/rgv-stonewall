@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press & Media - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .release-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .release-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--pride-purple);
+        }
+        .date-badge {
+            display: inline-block;
+            background: rgba(236, 72, 153, 0.2);
+            color: var(--pride-purple);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding-top: 120px; text-align: center;">
+        <div class="container reveal">
+            <h1 class="text-gradient">Press & Media</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Official Press Releases, Media Kits, and Brand Guidelines from the RGV Stonewall Democrats.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="margin-top: 3rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <h2 style="margin: 0;">Recent Press Releases</h2>
+            <a href="#" class="btn btn-secondary">Download Media Kit (Zip)</a>
+        </div>
+        
+        <div class="press-grid">
+            <div class="release-card">
+                <span class="date-badge">March 15, 2026</span>
+                <h3>Stonewall Democrats Announce 2026 Primary Endorsements</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">The Rio Grande Valley Stonewall Democrats PAC today released its highly anticipated list of primary endorsements for local and state races.</p>
+                <a href="#" class="text-pride" style="text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">Read Full Release &rarr;</a>
+            </div>
+            
+            <div class="release-card">
+                <span class="date-badge">February 28, 2026</span>
+                <h3>Coalition Statement on Anti-Trans Legislation in Texas Senate</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">In partnership with state-wide advocacy groups, RGV Stonewall condemns the latest push to restrict trans healthcare access in Texas.</p>
+                <a href="#" class="text-pride" style="text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">Read Full Release &rarr;</a>
+            </div>
+            
+            <div class="release-card">
+                <span class="date-badge">January 10, 2026</span>
+                <h3>Record Turnout Expected for Annual RGV Pride Summit</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">RGV Stonewall to host the largest voter registration block party and candidate forum in chapter history this coming April.</p>
+                <a href="#" class="text-pride" style="text-decoration: none; font-weight: bold; display: inline-block; margin-top: 1rem;">Read Full Release &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container reveal" style="margin-top: 4rem; margin-bottom: 4rem;">
+        <div class="card grid" style="grid-template-columns: 1fr 1fr;">
+            <div>
+                <h2>Brand Guidelines</h2>
+                <p>For press and partner organizations, please adhere to our brand guidelines when reproducing the RGV Stonewall logo and materials.</p>
+                <ul style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+                    <li><strong>Primary Colors:</strong> Pride Pink (#ec4899), Deep Violet (#8b5cf6), Stonewall Blue (#3b82f6)</li>
+                    <li><strong>Typography:</strong> Inter (Headings & Body)</li>
+                    <li><strong>Logo Usage:</strong> Ensure high contrast on solid backgrounds. Do not compress or stretch logo dimensions.</li>
+                </ul>
+                <a href="#" class="btn btn-secondary" style="margin-top: 1rem;">View Brand Book (PDF)</a>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <h3 style="margin-top: 0;">Media Contact</h3>
+                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1.5rem;">For interview requests, statements, or events coverage.</p>
+                <strong style="color: white; font-size: 1.1rem;">Michael Chen</strong>
+                <p style="margin: 0.2rem 0;">Communications Director</p>
+                <a href="mailto:media@rgvstonewall.org" class="text-pride" style="text-decoration: none;">media@rgvstonewall.org</a>
+                <p style="margin: 0.2rem 0;">(956) 555-0199</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-half-rainbow">RGV</span> Stonewall
+                </a>
+                <p>Empowering the LGBTQ+ voice in the democratic process across the Rio Grande Valley, Texas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

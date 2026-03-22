@@ -16,7 +16,7 @@
   --accent-blue: #3b82f6;
   
   /* Pride Gradient */
-  --pride-gradient: linear-gradient(90deg, #ff0018, #ffa52c, #ffff41, #008018, #0000f9, #86007d);
+  --pride-gradient: linear-gradient(90deg, #000000, #613915, #5bcefa, #f5a9b8, #ffffff, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
   --modern-pride-gradient: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent-blue));
   
   /* Typography */
@@ -101,6 +101,14 @@ p {
 
 .text-pride {
   background: var(--pride-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-half-rainbow {
+  background: linear-gradient(to bottom, var(--text-main) 50%, #000000 50%, #613915 55%, #5bcefa 60%, #f5a9b8 65%, #ffffff 70%, #e40303 75%, #ff8c00 80%, #ffed00 85%, #008026 90%, #004dff 95%, #750787 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth & Student Outreach - RGV Stonewall</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .campus-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .campus-card::before {
+            content: 'U';
+            position: absolute;
+            right: -20px;
+            bottom: -40px;
+            font-size: 15rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.02);
+            z-index: -1;
+            line-height: 1;
+        }
+        
+        .scholarship-box {
+            background: rgba(236, 72, 153, 0.1);
+            border: 2px dashed var(--pride-pink);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding-top: 120px; text-align: center;">
+        <div class="container reveal">
+            <h1 class="text-gradient">Student Chapters</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Empowering the next generation of LGBTQ+ political leadership at UTRGV, STC, and Valley high schools.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="margin-top: 3rem;">
+        <div class="grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="campus-card">
+                <h2 style="margin-top: 0; color: #f97316;">UTRGV Chapter</h2>
+                <p>Establishing a strong presence on both the Edinburg and Brownsville campuses. We organize voter registration drives outside the student union, host candidate forums for student government, and build coalitions with other progressive student orgs.</p>
+                <p style="font-weight: bold; margin-top: 1.5rem;">Next Meeting:</p>
+                <p style="margin: 0; color: rgba(255,255,255,0.7);">Every 2nd Tuesday at 6 PM</p>
+                <p style="margin: 0; color: rgba(255,255,255,0.7);">Edinburg Student Union</p>
+                <a href="#" class="btn btn-secondary" style="margin-top: 1.5rem;">Join Group Chat</a>
+            </div>
+            
+            <div class="campus-card" style="overflow: hidden;">
+                <h2 style="margin-top: 0; color: #10b981;">STC Chapter</h2>
+                <p>South Texas College students represent the heart of the Valley's workforce. Our STC chapter focuses on rapid mobilization, early voting education on the Pecan Campus, and community service projects.</p>
+                <p style="font-weight: bold; margin-top: 1.5rem;">Next Meeting:</p>
+                <p style="margin: 0; color: rgba(255,255,255,0.7);">Every 3rd Thursday at 5 PM</p>
+                <p style="margin: 0; color: rgba(255,255,255,0.7);">Pecan Campus Library</p>
+                <a href="#" class="btn btn-secondary" style="margin-top: 1.5rem;">Join Group Chat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarship Section -->
+    <section class="container reveal" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <div class="scholarship-box">
+            <span class="badge" style="background: var(--pride-pink); color: white;">Applications Open</span>
+            <h2 style="margin-top: 1rem;">The Marsha P. Johnson Civic Leadership Scholarship</h2>
+            <p style="max-width: 700px; margin: 1rem auto;">Awarding two $1,000 stipends annually to LGBTQ+ identifying high school seniors or current college students in the Rio Grande Valley who demonstrate exceptional commitment to political organizing and community equity.</p>
+            
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; color: rgba(255,255,255,0.8);">
+                <li>📝 <strong>Deadline:</strong> May 1st, 2026</li>
+                <li>🎓 <strong>Eligibility:</strong> Hidalgo, Cameron, Starr, Willacy residents</li>
+                <li>💡 <strong>Requirement:</strong> 500-word essay on local politics</li>
+            </ul>
+            
+            <a href="#" class="btn btn-pride" style="font-size: 1.1rem; padding: 0.8rem 2rem;">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-half-rainbow">RGV</span> Stonewall
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGV Logo Showcase - Maximum Pride Edition</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            padding: 4rem 0;
+        }
+        
+        .design-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 250px;
+        }
+        
+        .design-label {
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        
+        .base-logo {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        
+        .subtitle {
+            font-weight: 400;
+            font-size: 2rem;
+            color: var(--text-main);
+        }
+
+        /* 1. Progress Pride Half-Split */
+        .dv-1 .rgv {
+            background: linear-gradient(to bottom, #ffffff 50%, #000000 50%, #613915 55%, #5bcefa 60%, #f5a9b8 65%, #ffffff 70%, #e40303 75%, #ff8c00 80%, #ffed00 85%, #008026 90%, #004dff 95%, #750787 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* 2. Neon Pride Glow */
+        .dv-2 .rgv {
+            color: #fff;
+            text-shadow:
+                0 0 5px #fff,
+                -10px -10px 20px #e40303,
+                10px -10px 30px #ff8c00,
+                20px 0px 40px #ffed00,
+                10px 10px 30px #008026,
+                -10px 10px 30px #004dff,
+                -20px 0px 40px #750787;
+        }
+
+        /* 3. Liquid Animated Pride Gradient */
+        @keyframes liquidFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .dv-3 .rgv {
+            background: linear-gradient(270deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: liquidFlow 4s ease infinite;
+        }
+
+        /* 4. 3D Rainbow Extruded */
+        .dv-4 .rgv {
+            color: #f8fafc;
+            text-shadow: 
+                1px 1px 0 #e40303,
+                2px 2px 0 #ff8c00,
+                3px 3px 0 #ffed00,
+                4px 4px 0 #008026,
+                5px 5px 0 #004dff,
+                6px 6px 0 #750787,
+                7px 7px 10px rgba(0,0,0,0.5);
+            transform: skewX(-5deg);
+            display: inline-block;
+        }
+
+        /* 5. Animated Pride Stroke */
+        .dv-5 .rgv {
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(255,255,255,0.4);
+            position: relative;
+        }
+        .dv-5 .rgv::before {
+            content: "RGV";
+            position: absolute;
+            left: 0; top: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            overflow: hidden;
+            -webkit-text-stroke: 0px;
+            transition: width 0.5s ease;
+            white-space: nowrap;
+        }
+        .design-card:hover .dv-5 .rgv::before { width: 100%; }
+
+        /* 6. Holographic Pride Foil */
+        @keyframes holoFlow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        .dv-6 .rgv {
+            background: linear-gradient(135deg, 
+                rgba(228,3,3,1) 0%, 
+                rgba(255,140,0,1) 20%, 
+                rgba(255,237,0,1) 40%, 
+                rgba(0,128,38,1) 60%, 
+                rgba(0,77,255,1) 80%,
+                rgba(117,7,135,1) 100%);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: holoFlow 2s linear infinite;
+            filter: hue-rotate(10deg) saturate(1.5);
+        }
+
+        /* 7. Cyber Glitch Pride */
+        .dv-7 .rgv {
+            position: relative;
+            color: white;
+        }
+        .dv-7 .rgv::before, .dv-7 .rgv::after {
+            content: "RGV";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            opacity: 0.8;
+            mix-blend-mode: screen;
+        }
+        .dv-7 .rgv::before {
+            color: #e40303; /* Red glitch */
+            z-index: -1;
+            transform: translate(-4px, 2px);
+        }
+        .dv-7 .rgv::after {
+            color: #004dff; /* Blue glitch */
+            z-index: -2;
+            transform: translate(4px, -2px);
+        }
+
+        /* 8. Vaporwave Pastel Pride */
+        .dv-8 .rgv {
+            background: linear-gradient(180deg, #ffadad 0%, #ffd6a5 20%, #fdffb6 40%, #caffbf 60%, #9bf6ff 80%, #a0c4ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-style: italic;
+        }
+
+        /* 9. Glassmorphism Rainbow Overlay */
+        .dv-9 { position: relative; }
+        .dv-9 .bubble {
+            position: absolute; width: 60px; height: 60px; border-radius: 50%; filter: blur(15px); opacity: 0.8;
+        }
+        .dv-9 .b1 { background: #e40303; left: -10px; top: 0px; }
+        .dv-9 .b2 { background: #ff8c00; left: 30px; top: -20px; }
+        .dv-9 .b3 { background: #ffed00; left: 80px; top: 0px; }
+        .dv-9 .b4 { background: #008026; right: 50px; bottom: 0px; }
+        .dv-9 .b5 { background: #004dff; right: 10px; bottom: -20px; }
+        .dv-9 .b6 { background: #750787; right: -20px; bottom: 10px; }
+        
+        .dv-9 .base-logo {
+            position: relative;
+            z-index: 10;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        /* 10. Heavy Pride Gradient */
+        .dv-10 .rgv {
+            background: linear-gradient(90deg, #e40303, #ff8c00, #ffed00, #008026, #004dff, #750787);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -2px;
+        }
+        .dv-10 .subtitle {
+            background: var(--text-main);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2" style="bottom: auto; top: 50%;"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding-top: 150px; text-align: center; padding-bottom: 2rem;">
+        <div class="container reveal">
+            <h1 class="text-gradient">RGV Logo Sandbox</h1>
+            <p style="max-width: 600px; margin: 0 auto; color: var(--text-muted);">Exploring 10 unique, purely CSS-driven aesthetic treatments injected heavily with Pride Colors.</p>
+        </div>
+    </header>
+
+    <section class="container reveal">
+        <div class="showcase-grid">
+            
+            <!-- 1 -->
+            <div class="design-card dv-1">
+                <span class="design-label">1. Progress Pride Half-Split</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 2 -->
+            <div class="design-card dv-2">
+                <span class="design-label">2. Neon Pride Glow</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 3 -->
+            <div class="design-card dv-3">
+                <span class="design-label">3. Liquid Pride Gradient</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 4 -->
+            <div class="design-card dv-4">
+                <span class="design-label">4. 3D Rainbow Extruded</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 5 -->
+            <div class="design-card dv-5">
+                <span class="design-label">5. Animated Rainbow Hover</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 6 -->
+            <div class="design-card dv-6">
+                <span class="design-label">6. Holographic Pride Foil</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 7 -->
+            <div class="design-card dv-7">
+                <span class="design-label">7. Cyber Glitch Pride</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 8 -->
+            <div class="design-card dv-8">
+                <span class="design-label">8. Vaporwave Pastel Pride</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 9 -->
+            <div class="design-card dv-9">
+                <span class="design-label">9. Rainbow Glassmorphism</span>
+                <div class="bubble b1"></div><div class="bubble b2"></div><div class="bubble b3"></div>
+                <div class="bubble b4"></div><div class="bubble b5"></div><div class="bubble b6"></div>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+            <!-- 10 -->
+            <div class="design-card dv-10">
+                <span class="design-label">10. Heavy Pride Gradient</span>
+                <div class="base-logo"><span class="rgv">RGV</span> <span class="subtitle">Stonewall</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col" style="text-align: center;">
+                <p>10 Explorations of the RGV Identity. Built using pure HTML/CSS without external images.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

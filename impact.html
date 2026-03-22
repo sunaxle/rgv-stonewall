@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact & Transparency Report - RGV Stonewall</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .stat-card {
+            background: linear-gradient(180deg, rgba(236,72,153,0.1) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(236,72,153,0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--gradient-pride);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .donor-wall {
+            column-count: 3;
+            column-gap: 2rem;
+            margin-top: 2rem;
+        }
+        .donor-tier {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+            background: rgba(255,255,255,0.03);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid;
+        }
+        .donor-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+        .donor-list li { margin-bottom: 0.5rem; }
+        
+        @media (max-width: 768px) { .donor-wall { column-count: 1; } }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding-top: 120px; text-align: center;">
+        <div class="container reveal">
+            <h1 class="text-gradient">Impact & Transparency</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Because our donors deserve to know exactly how their hard-earned money builds LGBTQ+ political power in South Texas.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="margin-top: 3rem;">
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-number">45K</div>
+                <div style="font-weight: bold; letter-spacing: 1px;">VOTERS REACHED</div>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 1rem;">Through digital ads and mailers in the 2024 cycle.</p>
+            </div>
+            <div class="stat-card" style="border-color: rgba(139,92,246,0.2); background: linear-gradient(180deg, rgba(139,92,246,0.1) 0%, rgba(255,255,255,0.02) 100%);">
+                <div class="stat-number">12</div>
+                <div style="font-weight: bold; letter-spacing: 1px;">ENDORSED WINS</div>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 1rem;">Pro-equality candidates elected to local municipal and school boards.</p>
+            </div>
+            <div class="stat-card" style="border-color: rgba(59,130,246,0.2); background: linear-gradient(180deg, rgba(59,130,246,0.1) 0%, rgba(255,255,255,0.02) 100%);">
+                <div class="stat-number">$15K</div>
+                <div style="font-weight: bold; letter-spacing: 1px;">GRASSROOTS REVENUE</div>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 1rem;">Raised through small-dollar donations averaging $22.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Breakdown -->
+    <section class="container reveal" style="margin-top: 4rem;">
+        <div class="card grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+            <div>
+                <h2>Where Donations Go</h2>
+                <p>We are entirely volunteer-run. That means 0% of your contributions go to salaries, overhead, or consulting bloat. We aggressively push funds into direct voter contact.</p>
+                <ul style="line-height: 2; margin-top: 2rem;">
+                    <li><strong style="color: var(--pride-pink);">60% - Candidates & Campaigns:</strong> Direct contributions to endorsed candidates.</li>
+                    <li><strong style="color: var(--pride-purple);">25% - Voter Education:</strong> Slate mailers, text banks, and digital ads for get-out-the-vote drives.</li>
+                    <li><strong style="color: var(--pride-blue);">10% - Events & Organizing:</strong> Venue rentals for forums, Pride tabling materials, and volunteer hydration.</li>
+                    <li><strong style="color: #10b981;">5% - Treasury & Compliance:</strong> State pac reporting fees, banking fees, and web hosting.</li>
+                </ul>
+            </div>
+            <div style="text-align: center; position: relative;">
+                <!-- Placeholder for Chart -->
+                <div style="width: 300px; height: 300px; border-radius: 50%; border: 20px solid rgba(255,255,255,0.1); border-top-color: var(--pride-pink); border-right-color: var(--pride-purple); border-bottom-color: var(--pride-blue); border-left-color: #10b981; margin: 0 auto; transform: rotate(45deg);"></div>
+                <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold;">2024 Cycle Analytics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donor Wall -->
+    <section class="container reveal" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <h2 style="text-align: center;">2025/2026 Sustaining Donors</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto;">Thank you to the monthly contributors who provide the reliable foundation for our political action.</p>
+        
+        <div class="donor-wall">
+            <div class="donor-tier" style="border-top-color: var(--pride-pink);">
+                <h3 style="margin-top: 0; color: var(--pride-pink);">Trailblazer Circle ($50+/mo)</h3>
+                <ul class="donor-list">
+                    <li>Sarah & Elena Rodriguez</li>
+                    <li>Michael Chen</li>
+                    <li>The Garcia Family Trust</li>
+                    <li>Dr. James Wellington</li>
+                </ul>
+            </div>
+            <div class="donor-tier" style="border-top-color: var(--pride-purple);">
+                <h3 style="margin-top: 0; color: var(--pride-purple);">Advocate Circle ($25+/mo)</h3>
+                <ul class="donor-list">
+                    <li>Anonymous</li>
+                    <li>Carlos Hernandez</li>
+                    <li>Jessica Kim</li>
+                    <li>Sam & David Aris</li>
+                    <li>Maria Gonzalez</li>
+                </ul>
+            </div>
+            <div class="donor-tier" style="border-top-color: var(--pride-blue);">
+                <h3 style="margin-top: 0; color: var(--pride-blue);">Defender Circle ($10+/mo)</h3>
+                <ul class="donor-list">
+                    <li>15 Anonymous Donors</li>
+                    <li>Chris T.</li>
+                    <li>Linda P.</li>
+                    <li>The Smith-Jones Family</li>
+                    <li>Alex Rivera</li>
+                    <li>Daniel O.</li>
+                    <li>Laura M.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="donate.html" class="btn btn-pride" style="font-size: 1.2rem; padding: 1rem 3rem;">Join the Donor Wall</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-half-rainbow">RGV</span> Stonewall
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

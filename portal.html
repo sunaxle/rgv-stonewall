@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Portal - RGV Stonewall Democrats</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .portal-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            min-height: 500px;
+        }
+        .portal-sidebar {
+            background: rgba(255,255,255,0.03);
+            border-right: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .portal-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .portal-sidebar ul a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        .portal-sidebar ul a:hover, .portal-sidebar ul a.active {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding-left: 1rem;
+        }
+        .digital-card {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6, #3b82f6);
+            border-radius: 16px;
+            padding: 1.5rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+        }
+        .digital-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.2)"/></svg>');
+            background-size: 20px 20px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+        .card-body { position: relative; z-index: 2; }
+        .card-footer { display: flex; justify-content: space-between; margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.8; }
+        
+        @media (max-width: 768px) {
+            .portal-layout { grid-template-columns: 1fr; }
+            .portal-sidebar { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <span class="badge" style="margin:0;">Logged in as Jane D.</span>
+                <a href="index.html" class="btn btn-secondary" style="padding: 0.3rem 0.8rem;">Log Out</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 100px; margin-bottom: 4rem;">
+        <div class="portal-layout">
+            <!-- Sidebar -->
+            <aside class="portal-sidebar">
+                <div style="text-align: center;">
+                    <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 2px solid var(--pride-purple);">
+                        JD
+                    </div>
+                    <h3 style="margin-top: 1rem; margin-bottom: 0;">Jane Doe</h3>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-top: 0;">Sustaining Member</p>
+                </div>
+                
+                <ul class="portal-nav">
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="#">My Voting Record</a></li>
+                    <li><a href="#">Committee Signups</a></li>
+                    <li><a href="#">Membership Renewal</a></li>
+                    <li><a href="#">Update Profile</a></li>
+                </ul>
+                
+                <a href="donate.html" class="btn btn-pride" style="width: 100%; justify-content: center;">Upgrade Membership</a>
+            </aside>
+            
+            <!-- Main Content -->
+            <main>
+                <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px;">
+                    <h1 style="margin-top: 0;">Welcome Back, Jane!</h1>
+                    <p style="color: rgba(255,255,255,0.7);">Your membership is active and in good standing. Thank you for your continued support of the RGV Stonewall Democrats.</p>
+                </div>
+                
+                <div class="grid" style="margin-top: 2rem; grid-template-columns: 1fr 1fr;">
+                    <!-- Digital Card Mockup -->
+                    <div>
+                        <h3>Digital Membership Card</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;">Show this card at chapter events for priority entry and member polling.</p>
+                        
+                        <div class="digital-card">
+                            <div class="card-header">
+                                <strong style="font-size: 1.1rem; letter-spacing: 1px;">RGV STONEWALL</strong>
+                                <span style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">SUSTAINER</span>
+                            </div>
+                            <div class="card-body">
+                                <h2 style="margin: 0; font-size: 1.8rem; text-transform: uppercase;">Jane Doe</h2>
+                                <p style="margin: 0.2rem 0 0 0; opacity: 0.9;">Member ID: <strong>#89201</strong></p>
+                            </div>
+                            <div class="card-footer">
+                                <span>Joined: 04/2024</span>
+                                <span>Exp: 04/2027</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Items -->
+                    <div>
+                        <h3>Needs Your Attention</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div style="background: rgba(255,255,255,0.03); border-left: 3px solid var(--pride-blue); padding: 1rem;">
+                                <h4 style="margin: 0;">Vote in Primary Endorsements</h4>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin: 0.5rem 0;">Ballot closes in 4 days. Only members in good standing may vote.</p>
+                                <a href="#" class="text-pride" style="font-size: 0.9rem;">Cast Your Ballot &rarr;</a>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.03); border-left: 3px solid #10b981; padding: 1rem;">
+                                <h4 style="margin: 0;">Next General Meeting RSVP</h4>
+                                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin: 0.5rem 0;">March 25th at Cine El Rey. Let us know if you'll be there!</p>
+                                <a href="#" class="text-pride" style="font-size: 0.9rem; color: #10b981;">RSVP Now &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

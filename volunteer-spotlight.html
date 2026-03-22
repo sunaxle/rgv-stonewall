@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Opportunities - RGV Stonewall</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .role-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .role-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+            background: var(--gradient-pride);
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+        .role-card:hover::before { opacity: 1; }
+        
+        .spotlight {
+            background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(236,72,153,0.1) 100%);
+            border: 1px solid rgba(236,72,153,0.2);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+        .spotlight-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            border: 4px solid var(--pride-pink);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        @media (max-width: 768px) { .spotlight { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="text-half-rainbow">RGV</span> Stonewall
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="volunteer.html" class="active">Volunteer Hub</a>
+                <a href="donate.html" class="btn btn-pride" style="color: white; padding: 0.5rem 1rem;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="padding-top: 120px; text-align: center;">
+        <div class="container reveal">
+            <h1 class="text-gradient">Get Involved</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Democracy requires sweat equity. We need block walkers, policy nerds, event planners, and everyday voters who are ready to make a difference.</p>
+        </div>
+    </header>
+
+    <section class="container reveal" style="margin-top: 3rem;">
+        <h2 style="text-align: center;">Urgent Needs / Open Roles</h2>
+        
+        <div class="role-grid">
+            <div class="role-card">
+                <h3 style="margin-top: 0;">Block Walker</h3>
+                <span class="badge">Immediate Need</span>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Hit the pavement with us! Knock on doors of likely Democratic primary voters in targeted precincts to hand out our voter guide.</p>
+                <p style="font-size: 0.85rem;"><strong>Time:</strong> 2-4 hours, mostly Saturdays</p>
+                <a href="#" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">Sign Up</a>
+            </div>
+            
+            <div class="role-card">
+                <h3 style="margin-top: 0;">Phone Banker</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Make calls from the comfort of your home using our automated dialer software to remind voters of early voting locations.</p>
+                <p style="font-size: 0.85rem;"><strong>Time:</strong> 1-2 hours, evenings</p>
+                <a href="#" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">Sign Up</a>
+            </div>
+            
+            <div class="role-card">
+                <h3 style="margin-top: 0;">Data / Votebuilder (VAN) Specialist</h3>
+                <span class="badge" style="background: rgba(139,92,246,0.2); color: #c4b5fd;">Technical</span>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Help us cut turf and enter data from canvassing operations into VAN. Training is provided.</p>
+                <p style="font-size: 0.85rem;"><strong>Time:</strong> Variable, can be remote</p>
+                <a href="#" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">Sign Up</a>
+            </div>
+            
+            <div class="role-card">
+                <h3 style="margin-top: 0;">Event Setup / Tabling</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Represent RGV Stonewall at local farmer's markets, Pride events, and university campuses to register voters.</p>
+                <p style="font-size: 0.85rem;"><strong>Time:</strong> Occasional weekends</p>
+                <a href="#" class="btn btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Spotlight -->
+    <section class="container reveal" style="margin-bottom: 5rem;">
+        <div class="spotlight">
+            <div class="spotlight-img">[Photo: David]</div>
+            <div>
+                <span style="color: var(--pride-pink); font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Volunteer Spotlight</span>
+                <h2 style="margin: 0.5rem 0;">David M. — 150+ Doors Knocked</h2>
+                <p style="font-size: 1.1rem; line-height: 1.6;">"When I came out, I felt like I couldn't be both openly gay and safely living in the Valley. Registering voters and seeing openly queer candidates on our local ballots changed everything for me. Now, I block walk so the next generation doesn't have to feel that fear."</p>
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-top: 1rem;">David is an STC student and has been a core canvasser since 2024.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo mb-4" style="font-size: 1.2rem;">
+                    <span class="text-half-rainbow">RGV</span> Stonewall
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
